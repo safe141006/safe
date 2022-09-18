@@ -8,7 +8,7 @@ external-controller: :9090
 proxy-providers:
   ✈️ 我的机场:
     type: http
-    url: "机场链接"
+    url: "http://20.189.76.88/api/v1/client/subscribe?token=9f0b9e65a93e15da38cda9260bdee117"
     interval: 86400
     path: ./airpot/clash.yaml
     health-check:
