@@ -1,20 +1,3 @@
-
-danta926
-/
-Clash-Rules
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Clash-Rules/BanAD.txt
-@danta926
-danta926 Rename BanAD to BanAD.txt
- 1 contributor
-610 lines (604 sloc)  17.8 KB
 payload:
   # 本碎片只包含常见广告关键字、广告联盟。无副作用，放心使用
 
