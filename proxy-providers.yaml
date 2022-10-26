@@ -8,7 +8,7 @@ external-controller: :9090
 proxy-providers:
   ✈️ 我的机场:
     type: http
-    url: "http://20.189.76.88/api/v1/client/subscribe?token=9f0b9e65a93e15da38cda9260bdee117"
+    url: "https://proxies.bihai.cf/clash/proxies?c=CN,HK,TW,RU,JP,KR,SG,US&filter=rp"
     interval: 86400
     path: ./airpot/clash.yaml
     health-check:
