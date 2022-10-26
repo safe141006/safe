@@ -6,14 +6,41 @@ log-level: info
 external-controller: :9090
 
 proxy-providers:
-  ✈️ 我的机场:
+  BiHaiNode:
     type: http
     url: "https://proxies.bihai.cf/clash/proxies?c=CN,HK,TW,RU,JP,KR,SG,US&filter=rp"
-    interval: 86400
-    path: ./airpot/clash.yaml
+    path: BiHai.Clash/BiHaiNode.yaml
+    interval: 3600
     health-check:
       enable: true
-      interval: 600
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+  GridCentre:
+    type: http
+    url: "https://raw.fastgit.org/FMYC2015/GridCentre/Gates/YAML/FaRm"
+    path: FaRm.Clash/FaRm.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+  OpenitNode:
+    type: http
+    url: "https://raw.fastgit.org/yu-steven/openit/main/Clash.yaml"
+    path: OpenitNode.Clash/OpenitNode.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+  PaimonNode:
+    type: http
+    url: "https://raw.fastgit.org/paimonhub/Paimonnode/main/publish/clash.yaml"
+    path: PaimonNode.Clash/PaimonNode.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      interval: 300
       url: http://www.gstatic.com/generate_204
 
 proxy-groups:
@@ -22,7 +49,10 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
     use:
-      - ✈️ 我的机场
+      - BiHaiNode
+      - GridCentre
+      - OpenitNode
+      - PaimonNode
 
   - name: ♻️ 自动选择
     type: url-test
@@ -30,7 +60,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - ✈️ 我的机场
+      - BiHaiNode
+      - GridCentre
+      - OpenitNode
+      - PaimonNode
 
   - name: 🌍 国外网站
     type: select
@@ -39,7 +72,10 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连  
     use:
-      - ✈️ 我的机场
+      - BiHaiNode
+      - GridCentre
+      - OpenitNode
+      - PaimonNode
 
   - name: 🍎 苹果服务
     type: select
@@ -47,7 +83,10 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
     use:
-      - ✈️ 我的机场
+      - BiHaiNode
+      - GridCentre
+      - OpenitNode
+      - PaimonNode
 
   - name: 🎯 全球直连
     type: select
@@ -69,7 +108,10 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
     use:
-      - ✈️ 我的机场
+      - BiHaiNode
+      - GridCentre
+      - OpenitNode
+      - PaimonNode
       
 rule-providers:
   LocalAreaNetwork:
