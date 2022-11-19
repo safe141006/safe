@@ -6,15 +6,6 @@ log-level: info
 external-controller: :9090
 
 proxy-providers:
-  GridCentre:
-    type: http
-    url: "https://raw.fastgit.org/FMYC2015/GridCentre/Gates/YAML/FaRm"
-    path: FaRm.Clash/FaRm.yaml
-    interval: 3600
-    health-check:
-      enable: true
-      interval: 300
-      url: http://www.gstatic.com/generate_204
   OpenitNode:
     type: http
     url: "https://raw.fastgit.org/yu-steven/openit/main/Clash.yaml"
