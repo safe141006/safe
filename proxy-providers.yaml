@@ -8,7 +8,7 @@ external-controller: :9090
 proxy-providers:
   BiHaiNode:
     type: http
-    url: "https://"
+    url: "https://raw.fastgit.org/FMYC2015/GridCentre/Gates/YAML/FaRm"
     path: BiHai.Clash/BiHaiNode.yaml
     interval: 3600
     health-check:
