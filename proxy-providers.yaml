@@ -8,7 +8,7 @@ external-controller: :9090
 proxy-providers:
   BiHaiNode:
     type: http
-    url: "https://proxies.bihai.cf/clash/proxies?c=CN,HK,TW,RU,JP,KR,SG,US&filter=rp"
+    url: "https://"
     path: BiHai.Clash/BiHaiNode.yaml
     interval: 3600
     health-check:
